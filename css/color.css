@@ -87,6 +87,10 @@ a[target="_blank"] {
 }
 
 /* ===== MAIN */
+h2.logo-text:hover {
+  color: var(--primary-color-40);
+}
+
 .date-text {
   color: var(--text-color-50);
 }
