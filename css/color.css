@@ -154,8 +154,8 @@ footer p {
   color: var(--text-color-60);
 }
 
-footer a:visited {
-  color: var(--text-color-60);
+footer a {
+  color: var(--text-color-60)
 }
 
 footer a:hover {
