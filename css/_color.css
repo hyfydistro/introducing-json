@@ -1,0 +1,207 @@
+/* Color Stylesheet */
+/* For Modern Browsers - Created in 2020 */
+/* || INCLUDES:
+- Color Variation
+  - Primary
+  - Text color
+- UI Component...
+*/
+
+:root {
+  --primary-color: #2987ff;
+
+  /* Primary Color Variation */
+  --primary-color-05: #e5f1ff;
+  --primary-color-10: #cce2ff; /* In use */
+  --primary-color-02: #99c6ff;
+  --primary-color-03: #66a9ff;
+  --primary-color-40: #2987ff; /* In use - aka "Main Color" */
+  --primary-color-05: #0070ff;
+  --primary-color-60: #005acc;
+  --primary-color-70: #004399; /* In use */
+  --primary-color-80: #002d66; /* In semi-use */
+  --primary-color-90: #001633;
+
+  /* Text Color */
+  --text-color-05: #f2f2f2;
+  --text-color-10: #e5e5e5;
+  --text-color-20: #cccccc;
+  --text-color-30: #b2b2b2;
+  --text-color-40: #999999; /* In use - REJECTED?  A11y Concerns */
+  --text-color-50: #808080; /* In use - REJECTED?  A11y Concerns */
+  --text-color-60: #666666; /* In use */
+  --text-color-70: #4d4d4d; /* In use */
+  --text-color-80: #1a1a1a; /* In use */
+  --text-color-90: #000000;
+
+  /* NOTE */
+  /* || link color
+  - text link color: --primary-color-70
+  - text link color ACTIVE: --primary-color-80
+  */
+  /* || On UI components
+  - module bg color
+  - on-menu hover color
+  */
+}
+
+/* || Contents
+- HEADER
+- MAIN
+- ASIDE - featured
+- ASIDE - Language-container
+- FOOTER
+*/
+
+/* ===== HEADER */
+header {
+  background-color: #fff;
+}
+
+a.logo-link:focus {
+  color: var(--primary-color-40);
+}
+
+/* Logo Text */
+.blue-colored {
+  color: var(--primary-color-40);
+}
+
+.logo-link:visited {
+  /* Disables default links visited color */
+  color: var(--text-color-80);
+}
+
+/* ===== NAV */
+.link {
+  color: var(--text-color-80);
+}
+
+#link-pdf,
+a[target="_blank"] {
+  color: var(--primary-color-70);
+}
+
+.passage-links:focus {
+  outline: 2px solid var(--primary-color-40);
+}
+
+/* ===== MAIN */
+.date-text {
+  color: var(--text-color-50);
+}
+
+a[target="_blank"]:hover {
+  text-decoration: none;
+}
+
+#link-pdf,
+a[target="_blank"]:visited {
+  color: var(--primary-color-80);
+}
+
+a[target="_blank"]:focus,
+.link:focus {
+  outline: 2px solid var(--primary-color-40);
+}
+
+.highlight-box {
+  background-color: var(--primary-color-10);
+}
+
+/* ===== ASIDE */
+/* Theme: Bottom borer for aside h2 */
+.underlined {
+  border-bottom: 1px solid var(--text-color-30);
+}
+
+.cards-wrapper:focus {
+  outline: 2px solid var(--primary-color-40);
+}
+
+.cards-wrapper {
+  color: var(--text-color-80);
+}
+
+/* Theme: Top / Bottom borer for language container */
+.language-container {
+  border-top: 1px solid var(--text-color-30);
+  border-bottom: 1px solid var(--text-color-30);
+}
+
+.column-1 a,
+.column-2 a {
+  color: var(--primary-color-70);
+}
+
+.column-1 a:visited,
+.column-2 a:visited {
+  color: var(--primary-color-80);
+}
+
+.column-1 a:focus,
+.column-2 a:focus {
+  outline: 2px solid var(--primary-color-40);
+}
+
+/* ===== FOOTER */
+
+footer p {
+  color: var(--text-color-60);
+}
+
+footer a:visited {
+  color: var(--text-color-60);
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+footer a:focus {
+  outline: 2px solid var(--primary-color-40);
+}
+
+/* || Media Queries */
+/* S - M */
+/* MOBILE, TABLET */
+@media all and (max-width: 960px) {
+  /* HEADER - NAV */
+  a.link:hover {
+    background-color: var(--primary-color-10);
+    color: var(--primary-color-80);
+  }
+
+  a.link:focus {
+    background-color: var(--primary-color-10);
+    color: var(--primary-color-80);
+    outline: none;
+  }
+
+  .link:active,
+  #link-pdf:active {
+    color: #fff;
+  }
+
+  /* When visited, a highlight stays,
+  which indicates its current page */
+  a.link.active {
+    background-color: var(--text-color-10);
+    color: var(--text-color-80);
+  }
+}
+
+/* L */
+@media all and (min-width: 960px) {
+  .link:hover:not(.active):not(#link-pdf) {
+    text-decoration: underline;
+  }
+
+  #link-pdf:hover {
+    text-decoration: none;
+  }
+
+  #link-pdf:focus {
+    outline: 2px solid var(--primary-color-40);
+  }
+}

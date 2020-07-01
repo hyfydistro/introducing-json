@@ -1,0 +1,289 @@
+/* spatial system stylesheet */
+/* For Modern Browsers - Created in 2020 */
+/* || What this covers (mostly):
+- margins
+- paddings
+- L / R outer margins
+ */
+
+:root {
+  /* Base Value */
+  --space-base-size: 1rem;
+  /* e.g. 16px */
+  --space-scale-ratio: 1.5;
+  /* e.g. modular scale */
+  /* space scale */
+  --space-quarter: calc(
+    1rem / (var(--space-scale-ratio) * var(--space-scale-ratio))
+  );
+  --space-half: calc(1rem / var(--space-scale-ratio));
+  /* font base / normal: 1em */
+  --space-01: calc(1rem * var(--space-scale-ratio));
+  --space-02: calc(1rem * var(--space-scale-ratio) * var(--space-scale-ratio));
+  --space-03: calc(
+    1rem * var(--space-scale-ratio) * var(--space-scale-ratio) *
+      var(--space-scale-ratio)
+  );
+  --space-04: calc(
+    1rem * var(--space-scale-ratio) * var(--space-scale-ratio) *
+      var(--space-scale-ratio) * var(--space-scale-ratio)
+  );
+  --space-05: calc(
+    1rem * var(--space-scale-ratio) * var(--space-scale-ratio) *
+      var(--space-scale-ratio) * var(--space-scale-ratio) *
+      var(--space-scale-ratio)
+  );
+}
+
+/* || General Layout (Contents)
+- headings (h1-h4) and body copy (p)
+- Semantics
+  - header
+  - footer
+- Images (img; icons)
+- UI Component
+  - logo components
+  - Hamburger Menu - Open
+- Modules
+  - Highlight-box
+  - Cards
+    - cards__text
+    - cards__image
+*/
+
+/* ===== headings (h1-h4) and body copy (p)*/
+h1 {
+  margin-top: var(--space-01);
+  margin-bottom: var(--space-02);
+}
+
+/* Directed to target header h2. Other targets undetermined. */
+h2:not(.logo-text) {
+  margin-bottom: var(--space-01);
+  margin-top: var(--space-01);
+}
+
+/* ASIDE header - h2 */
+.underlined {
+  padding-bottom: var(--space-01);
+}
+
+p {
+  margin-bottom: var(--space-01);
+}
+
+/* ===== Semantics */
+header {
+  padding-top: var(--space-01);
+  padding-bottom: var(--space-01);
+}
+
+aside.featured {
+  /* Margin Collapse with h2 above */
+  margin-top: var(--space-01);
+}
+
+/* ASIDE - Language Container */
+.language-container {
+  padding-top: var(--space-01);
+  padding-bottom: var(--space-01);
+  margin-bottom: var(--space-02);
+}
+
+footer {
+  margin-bottom: var(--space-01);
+}
+
+/* ===== Images */
+img.figures {
+  padding-top: var(--space-01);
+  padding-bottom: var(--space-02);
+}
+
+/* ===== UI Components */
+/* Logo Components */
+.logo-icon {
+  margin-right: var(--space-half);
+}
+
+/* Menu hmaburger - Open */
+nav button[aria-controls="menu"].open {
+  margin-top: var(--space-01);
+  margin-bottom: var(--space-01);
+}
+
+#menu li a {
+  display: block;
+  padding-top: var(--space-01);
+  padding-bottom: var(--space-01);
+  padding-left: var(--space-01);
+  /* See '_color.css' for following effects
+  - hover
+  - active
+   */
+}
+
+/* ASIDE - language-container component */
+.language-icon-wrapper {
+  margin-bottom: var(--space-quarter);
+}
+
+/* ===== Modules */
+/* Highlight-box */
+.highlight-box {
+  margin-top: var(--space-01);
+  margin-bottom: var(--space-01);
+  padding-top: var(--space-01);
+  padding-bottom: var(--space-01);
+}
+
+.highlight-box ul li:first-child {
+  margin-bottom: var(--space-01);
+}
+
+/* Cards */
+.cards-group {
+  padding-top: var(--space-02);
+}
+
+.cards-wrapper {
+  position: relative;
+  display: block;
+  /* margin-top: var(--space-02); */
+  margin-bottom: var(--space-02);
+  /* Center components */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tags {
+  margin-top: var(--space-half);
+  margin-left: var(--space-half);
+  padding: var(--space-half);
+}
+
+.cards__text {
+  padding-left: 21px;
+  margin-top: var(--space-01);
+}
+
+.cards__text h3 {
+  margin-bottom: var(--space-01);
+}
+
+.back-to-top {
+  right: var(--space-01);
+  bottom: var(--space-01);
+}
+
+/* || Media Queries */
+/* S */
+@media all and (max-width: 600px) {
+  /* Mobile L / R margins presets (1) */
+  .preset-margins {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  /* Mobile L / R margins presets (2) */
+  .logo {
+    margin-left: 16px;
+  }
+
+  /* Mobile L / R margins presets (3) */
+  /* Hamburger Menu - Hacks*/
+  /* NB: Giving header  L / R margins results to something funny. i.e. this hacks (until further ado!) */
+  button[aria-controls="menu"] {
+    margin-right: 16px;
+  }
+
+  main {
+    margin-top: calc(70px + var(--space-01));
+  }
+
+  .highlight-box {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* M */
+@media all and (min-width: 601px) and (max-width: 960px) {
+  /* Mobile L / R margins presets (1) */
+  .preset-margins {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  /* Mobile L / R margins presets (2) */
+  .logo {
+    margin-left: 32px;
+  }
+
+  /* Mobile L / R margins presets (3) */
+  button[aria-controls="menu"] {
+    margin-right: 32px;
+  }
+
+  main {
+    margin-top: calc(96px + var(--space-01));
+  }
+
+  .highlight-box {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media all and (min-width: 640px) {
+  /* Cards */
+  aside.featured .cards-group {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+
+  aside.featured .cards-group {
+    column-gap: var(--space-02);
+  }
+}
+
+@media all and (min-width: 690px) {
+  .underlined {
+    padding-left: var(--space-01);
+  }
+
+  .cards-group {
+    padding-left: var(--space-01);
+    padding-right: var(--space-01);
+  }
+
+  .column-1,
+  .language-icon-wrapper {
+    padding-left: var(--space-01);
+  }
+}
+
+@media all and (min-width: 960px) {
+  /* QUICK FIX (HACKS) for unusual reaction for the following elements */
+  .cards__text {
+    padding-bottom: var(--space-01);
+  }
+
+  .cards__text p {
+    margin-bottom: 0;
+  }
+
+  .highlight-box {
+    padding-left: var(--space-01);
+    padding-right: var(--space-01);
+  }
+
+  #menu li a {
+    display: inline-block;
+    padding: 0;
+    margin-top: var(--space-01);
+    margin-bottom: var(--space-01);
+    margin-left: var(--space-01);
+  }
+}

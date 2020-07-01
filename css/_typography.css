@@ -1,0 +1,161 @@
+/* Typography stylesheet */
+/* For Modern Browsers - Created in 2020 */
+/* || INCLUDES:
+- font face
+  - default
+  - code syntax
+- font sizes
+  - moodular scale
+- line-height (NOT DETERMINED)
+- font weight (NOT DETERMINED)
+ */
+@font-face {
+  font-family: bahnschrift;
+  src: url('fonts/bahnschrift.ttf');
+}
+
+:root {
+  /* font face */
+  --font-face: 'Bahnschrift', sans-serif, serif;
+  --font-code-syntax: Courier, monospace, sans-serif;
+
+  /* Set base value */
+  --base-font-size: 14px;
+  --text-scale-ratio: 1.25; /* e.g. modular scale */
+
+  /* type scale */
+  --text-xs: calc(1rem / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+  --text-sm: calc(1rem / var(--text-scale-ratio));
+  /* font base / normal: 1em */
+  --text-md: calc(1rem * var(--text-scale-ratio)); /*16.8 */
+  --text-lg: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio)); /* 20.16 */
+  --text-xl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)); /* 24.192 */
+  --text-xxl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxxl: calc(1rem * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+  /* WIP */
+  /* Font Style: boldness */
+  --weight: 1rem;
+
+  /* WIP */
+  /* Space */
+  --heading-h1-line-height: 1em;
+  --heading-h2-line-height: 1em;
+  --heading-h3-line-height: 1em;
+  --body-line-height: 1em;
+
+  /* Dark Theme */
+  /* ? Consider Color and Space */
+}
+
+/* || Contents
+- html (root)
+- headings (h1-h3)
+- Miscellaneous
+*/
+
+/* ===== HTML (root) */
+html {
+  font-size: var(--base-font-size);
+  font-family: var(--font-face);
+}
+
+/* ===== Headings (H1-H3) */
+h1 {
+  font-size: 27px;
+  line-height: 1.5rem;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.5rem;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.5rem;
+  font-weight: normal;
+}
+
+/* ===== Miscellaneous */
+p,
+.date-text,
+a .link,
+footer p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+code {
+  font-family: courier, 'Bahnschrift', sans-serif;
+}
+
+dfn {
+  font-family: courier, 'Bahnschrift', sans-serif;
+  font-style: normal;
+}
+/* Logo Text */
+.logo-text {
+  font-weight: normal;
+}
+
+/* Link */
+a {
+  text-decoration: none;
+}
+
+.link-pdf {
+  text-decoration: underline;
+}
+
+.language-module p {
+  line-height: 28px;
+}
+
+/* MEDIA QUERIES */
+/* 320px - XS */
+/* 
+Note: 320px would be the default root origin,
+where XS is relative to 
+*/
+@media all and (min-width: 375px) {
+  html { font-size: 15px; }
+  h1 { font-size: var(--text-xxl); }
+  h2 { font-size: var(--text-xl); }
+  h3 { font-size: var(--text-md); }
+}
+
+/* S */
+@media all and (min-width: 600px) {
+  html { font-size: 16px; }
+  h1 { font-size: var(--text-xxl); }
+  h2 { font-size: var(--text-xl); }
+  h3 { font-size: var(--text-md); }
+}
+
+/* S (2019 popular device-width) */
+@media all and (min-width: 768px) {
+  html { font-size: 20px; }
+  h1 { font-size: var(--text-xxl); }
+  h2 { font-size: var(--text-xl); }
+  h3 { font-size: var(--text-md); }
+}
+
+@media all and (min-width: 960px) {
+  .active {
+    font-weight: bold;
+  }
+
+  main h1 {
+    font-weight: normal;
+    text-align: center;
+  }
+}
+
+/* M */
+@media all and (min-width: 1024px) {
+    html { font-size: 20px; }
+    h1 { font-size: var(--text-xxl); }
+    h2 { font-size: var(--text-xl); }
+    h3 { font-size: var(--text-md); }
+  }
