@@ -1,14 +1,14 @@
 const cacheName = "v1";
 
 const cacheAssets = [
-  "introducing-json.html",
+  "index.html",
   "affiliated-technologies.html",
   "grammar.html",
   "script.js",
   "css/main.css",
-  "css/_typography.css",
-  "css/_space.css",
-  "css/_color.css",
+  "css/typography.css",
+  "css/space.css",
+  "css/color.css",
   "css/affiliated-technologies.css",
   "css/grammar.css",
   "img/favicon.ico",
